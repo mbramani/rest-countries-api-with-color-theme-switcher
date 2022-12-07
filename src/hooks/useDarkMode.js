@@ -15,10 +15,10 @@ function useDarkMode() {
       document.documentElement.classList.remove('dark')
       setTheme('light')
     }
-  }, [])
+  }, [theme])
 
   const toggleTheme = () => {
-    if ((theme = 'dark')) {
+    if ((theme === 'dark')) {
       setTheme('light')
       localStorage.theme = 'light'
     } else {
