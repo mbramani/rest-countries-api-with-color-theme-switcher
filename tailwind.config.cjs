@@ -13,8 +13,8 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        'normal': '0 0px 10px 0px rgba(0, 0, 0, 0.15)',
-      }
+        normal: '0 0px 10px 0px rgba(0, 0, 0, 0.15)',
+      },
     },
   },
   darkMode: 'class',
