@@ -1,19 +1,20 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import styled from 'styled-components'
+import tw from 'twin.macro'
+import { ContentWrapper, GlobalStyles } from './styles'
+import CountriesProvider from './Providers/CountriesProvider'
+import useDarkMode from './hooks/useDarkMode'
 import Header from './components/Header/Header'
 import SearchPage from './pages/SearchPage'
 import CountryDetails from './pages/CountryDetails'
-import { ContentWrapper, GlobalStyles } from './styles'
-import useDarkMode from './hooks/useDarkMode'
-import styled from 'styled-components'
-import tw from 'twin.macro'
 
 const AppWrapper = styled.div`
-  ${tw` min-h-screen`}
+  ${tw`min-h-screen`}
 `
 function App() {
   const { theme, toggleTheme } = useDarkMode()
   return (
-    <>
+    <CountriesProvider>
       <GlobalStyles />
       <AppWrapper>
         <Header currentTheme={theme} toggleTheme={toggleTheme} />
@@ -25,7 +26,7 @@ function App() {
           </Routes>
         </ContentWrapper>
       </AppWrapper>
-    </>
+    </CountriesProvider>
   )
 }
 

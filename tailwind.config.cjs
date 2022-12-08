@@ -10,10 +10,6 @@ module.exports = {
       'lm-secondary': 'var(--lm-very-dark-blue)',
       'lm-base': 'var(--very-light-gray)',
       'lm-dark-gray': 'hsl(0, 0%, 52%)',
-
-
-
-
     },
     extend: {},
   },
