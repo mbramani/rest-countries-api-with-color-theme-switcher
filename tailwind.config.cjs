@@ -11,7 +11,11 @@ module.exports = {
       'lm-base': 'var(--very-light-gray)',
       'lm-dark-gray': 'hsl(0, 0%, 52%)',
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'normal': '0 0px 10px 0px rgba(0, 0, 0, 0.15)',
+      }
+    },
   },
   darkMode: 'class',
   plugins: [],
