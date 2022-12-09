@@ -13,7 +13,11 @@ export default function Header({ currentTheme, toggleTheme }) {
     <Wrapper>
       <h1 onClick={gotoHome}>Where in the world?</h1>
       <button onClick={toggleTheme}>
-        {currentTheme === 'light' ? <MoonIcon /> : <SunIcon />}
+        {currentTheme === 'light' ? (
+          <MoonIcon className="fill-lm-secondary" />
+        ) : (
+          <SunIcon className="fill-dm-secondary" />
+        )}
         <span>{currentTheme === 'light' ? 'Light' : 'Dark'} Mode</span>
       </button>
     </Wrapper>

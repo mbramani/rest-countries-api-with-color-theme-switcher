@@ -1,4 +1,8 @@
 function CountryDetails() {
-  return <></>
+  return (
+    <>
+      <div>hellow</div>
+    </>
+  )
 }
 export default CountryDetails

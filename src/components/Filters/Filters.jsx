@@ -8,6 +8,7 @@ import {
   MenuItem,
 } from './Filters.styles'
 import { ReactComponent as SearchIcon } from '../../assets/search.svg'
+import useTheme from '../../hooks/useTheme'
 
 const items = ['', 'Africa', 'America', 'Asia', 'Europe', 'Oceania']
 
@@ -22,6 +23,7 @@ export default function Filters({
     selectedItem,
     getToggleButtonProps,
     getMenuProps,
+    highlightedIndex,
     getItemProps,
   } = useSelect({
     items,
@@ -29,6 +31,7 @@ export default function Filters({
     onSelectedItemChange: handleSelectedItemChange,
   })
 
+  const { theme } = useTheme()
   return (
     <Wrapper>
       <InputWrapper>
@@ -48,6 +51,8 @@ export default function Filters({
             items.map((item, index) => (
               <MenuItem
                 key={`${item}${index}`}
+                isHighlighted={highlightedIndex === index}
+                theme={theme}
                 {...getItemProps({ item, index })}
               >
                 {item || 'Filter by Region'}

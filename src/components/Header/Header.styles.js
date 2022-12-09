@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   }
 
   button {
-    ${tw`text-base font-normal tracking-wide flex items-center hover:cursor-pointer`}
+    ${tw`text-base font-normal tracking-wide flex items-center hover:cursor-pointer `}
     svg {
       ${tw`h-6 w-6 mr-1.5`}
     }

@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     ${tw`text-base font-bold`}
   }
   p {
-    ${tw`opacity-80 tracking-widest	text-sm my-1.5 mx-0 font-light`}
+    ${tw`opacity-80 tracking-widest	text-sm my-1.5 mx-0 font-normal`}
 
     span {
       ${tw`font-medium`}
