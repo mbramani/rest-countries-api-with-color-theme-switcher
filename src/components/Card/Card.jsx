@@ -12,7 +12,7 @@ export default function Card({ country }) {
   return (
     <Wrapper>
       <StyledLink to={`country/${common}`}>
-        <img src={svg} alt={common} />
+        <img src={svg} alt={common} loading="lazy" />
         <div>
           <h3>{common}</h3>
           <p>

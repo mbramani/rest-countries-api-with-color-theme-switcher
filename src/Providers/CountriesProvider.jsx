@@ -1,4 +1,10 @@
-import { useState, useEffect, createContext, useContext } from 'react'
+import {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  useCallback,
+} from 'react'
 
 const CountryContext = createContext({})
 
@@ -20,25 +26,37 @@ export function CountriesProvider({ children }) {
       })
   }, [])
 
-  const getCountry = (countryName) =>
-    countries.find(
-      (country) => country.name.common.toLowerCase() === countryName
-    )
+  const findCountryByName = useCallback(
+    (name) => {
+      if (!countries) return
+      return countries.find((country) => country.name.common === name)
+    },
+    [countries]
+  )
+
+  const findByAltSpelling = (altSpelling) => {
+    if (!countries) return
+    return countries.find((country) => country.cca3 === altSpelling)
+  }
 
   return (
-    <CountryContext.Provider value={{ countries, state, getCountry }}>
+    <CountryContext.Provider
+      value={{ countries, state, findCountryByName, findByAltSpelling }}
+    >
       {children}
     </CountryContext.Provider>
   )
 }
 
 const useCountries = () => {
-  const { countries, getCountry, state } = useContext(CountryContext)
+  const { countries, state, findCountryByName, findByAltSpelling } =
+    useContext(CountryContext)
 
   return {
     countries,
-    getCountry,
     state,
+    findCountryByName,
+    findByAltSpelling,
   }
 }
 export default useCountries
