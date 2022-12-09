@@ -29,16 +29,24 @@ Users should be able to:
 
 ### Screenshot
 
-- Desktop
+#### Desktop
+
   ![desktop dark mode](./screenshots/desktop-dm.png)
+  
   ![desktop light mode](./screenshots/desktop-lm.png)
+  
   ![desktop dark mode country info](./screenshots/desktop-dm-info.png)
+  
   ![desktop light mode country info](./screenshots/desktop-lm-info.png)
 
-- Mobile
+#### Mobile
+
   ![mobile dark mode](./screenshots/mobile-dm.png)
+  
   ![mobile light mode](./screenshots/mobile-lm.png)
+  
   ![mobile dark mode country info](./screenshots/mobile-dm-info.png)
+  
   ![mobile light mode country info](./screenshots/mobile-lm-info.png)
 
 
