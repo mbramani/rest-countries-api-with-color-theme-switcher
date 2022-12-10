@@ -18,7 +18,7 @@ export default function Header({ currentTheme, toggleTheme }) {
         ) : (
           <SunIcon className="fill-dm-secondary" />
         )}
-        <span>{currentTheme === 'light' ? 'Light' : 'Dark'} Mode</span>
+        <span>{currentTheme === 'light' ? 'Dark': 'Light' } Mode</span>
       </button>
     </Wrapper>
   )
