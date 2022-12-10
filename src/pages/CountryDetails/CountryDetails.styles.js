@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import tw from 'twin.macro'
 
 export const Wrapper = styled.div`
-  ${tw`p-12`}
+  ${tw`px-4 md:px-12 py-6 md:py-14`}
 `
 export const InfoWrapper = styled.div`
   ${tw`w-full grid grid-cols-1 md:grid-cols-2 gap-12`}
 
   img {
-    ${tw`w-full items-center justify-self-end max-w-xl`}
+    ${tw`w-full items-center justify-self-center max-w-xl`}
   }
 `
 
