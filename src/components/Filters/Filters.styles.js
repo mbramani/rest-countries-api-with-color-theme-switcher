@@ -27,10 +27,11 @@ export const DropdownMenu = styled.ul`
 `
 export const MenuItem = styled.li`
   ${tw`text-left px-4 py-2 w-48 hover:bg-lm-base dark:hover:bg-dm-base cursor-pointer`}
-  ${({ isHighlighted, theme }) => {
+ 
+  &${({ isHighlighted, theme }) => {
     if (theme === 'dark' && isHighlighted) return tw`bg-dm-base`
   }}
-  ${({ isHighlighted, theme }) => {
+  &${({ isHighlighted, theme }) => {
     if (theme === 'light' && isHighlighted) return tw`bg-lm-base`
   }}
 `
